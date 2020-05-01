@@ -42,6 +42,10 @@ header h1 {
     cursor: default;
 }
 
+header h1:hover {
+    text-decoration:underline;
+}
+
 section {
     display:flex;
     flex-direction:column;
@@ -51,14 +55,16 @@ section {
 #nice-thoughts {
     box-sizing: border-box;
     display:flex;
+    position:relative;
     justify-content: center;
     align-items: center;
     width:700px;
-    height:250px;
+    height:200px;
     background-color:black;
     padding:3em;
     transition:var(--transition-ease);
     border-radius: 10px;
+    z-index: 50;
 }
 
 #nice-thoughts p {
@@ -68,9 +74,132 @@ section {
     font-size: 20px;
     font-weight: bolder;
     text-transform:uppercase;
-    cursor: default;
+    cursor: default;    
+}
+
+#quote-mark-up-black {
+    position:absolute;
+    z-index:70;
+    left:-26px;
+    top:-10px;
+    font-size:200px;
+    color:white;
+        -webkit-text-stroke-width:0.02em;
+        -webkit-text-stroke-color: black;
+    font-weight: bolder;
+    font-family:var(--header-font);
+}
+
+#quote-mark-down-black {
+    position:absolute;
+    z-index:70;
+    right:-27px;
+    bottom:-120px;
+    font-size:200px;
+    color:white;
+        -webkit-text-stroke-width:0.02em;
+        -webkit-text-stroke-color: black;
+    font-weight: bolder;
+    font-family:var(--header-font);
 }
 
 #nice-thoughts:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
+.inline {
+    display:inline-block;
+}
+#btn-group {
+    
+    box-sizing: border-box;
+    width:700px;
+    height:auto;
+    margin-top:50px;
+    padding:30px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.back-btn {
+    background-color:black;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-ease);
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+}
+
+
+#random {
+    background-color:black;
+    width:120px;
+    height:120px;
+    border-radius:60px;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-ease);
+    box-sizing: border-box;
+}
+#random:hover {
+    transform: scale(1.2);
+}
+#random:active {
+    border:3px solid white;
+}
+
+.btn {
+    text-align:center;
+    padding:40px;
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:12px;
+
+}
+
+footer {
+    border-top: 5px solid black;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding:3% 20% 0 20%;
+}
+footer p {
+    font-size:12px;
+}
+
+#left-footer {
+    align-self: center;
+    height:auto;
+    font-family:Helvetica, sans-serif;
+}
+
+#middle-footer {
+    align-self: center;
+    height:auto;
+    font-family:Helvetica, sans-serif;
+}
+#middle-footer img {
+    width:10px;
+    height:auto;
+}
+#right-footer {
+    align-self: center;
+    height:auto;
+    font-family:Helvetica, sans-serif;
+}
+
+/* MEDIA QUERIES */
