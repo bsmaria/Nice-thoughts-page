@@ -175,9 +175,10 @@ footer {
     display:flex;
     flex-direction:row;
     justify-content: space-around;
-    padding:3% 20% 0 20%;
+    padding:3% 20% 3% 20%;
 }
 footer p {
+    text-align:center;
     font-size:12px;
 }
 
@@ -203,3 +204,30 @@ footer p {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width:800px) {
+    #nice-thoughts {
+         width:500px;
+        }
+    
+}
+
+@media (max-width:600px) {
+    #nice-thoughts {        
+        width:370px;
+        height:200px;        
+    }
+    #nice-thoughts p {       
+        font-size: 18px;         
+    }
+}
+
+@media (max-width:300px) {
+    #nice-thoughts {        
+        width:220px;
+        height:200px;        
+    }
+    #nice-thoughts p {       
+        font-size: 10px;         
+    }
+}
